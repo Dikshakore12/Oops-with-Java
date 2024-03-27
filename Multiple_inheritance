@@ -1,0 +1,77 @@
+package Multiple_Inheritance;
+
+public class Animal {
+		public void eat() {
+			System.out.println("Animal is eating.");
+		}
+
+	}
+	class Vehicle {//using interface
+		public void drive() {
+			System.out.println("Vehicle is being driven.");
+		}
+	}
+	class AnimalVehicle {
+		private Animal animal;
+		private Vehicle vehicle;
+		
+		public AnimalVehicle() {
+			animal = new Animal();
+			vehicle = new Vehicle();
+		}
+		public void eat() {
+			animal.eat();
+			
+		}
+		public void drive() {
+			vehicle.drive();
+		}
+	}
+	class testMultipleInheritance{
+		public static void main(String[] args) {
+			AnimalVehicle animalVehicle = new AnimalVehicle();
+			animalVehicle.eat(); // output : Animal is eating.
+			animalVehicle.drive(); //Output : Vehicle is being driven.
+		}
+	}
+//second EXAMPLE
+package Multiple_Inheritance;
+
+public class Student {
+		public void Num() {
+			System.out.println("100 Students present in one Class");
+		}
+
+	}
+	class Faculty {
+		public void Num2() {
+			System.out.println("10 Teachers teach in a college.");
+		}
+	}
+	class StudentFaculty{
+		private Student study;
+		private Faculty teach;
+		
+		public StudentFaculty() {
+			study = new Student();
+			teach = new Faculty();
+		}
+		public void Num() {
+			study.Num();
+			
+		}
+		public void Num2() {
+			teach.Num2();
+		}
+	}
+	class testMultipleInheritance12{
+		public static void main(String[] args) {
+			StudentFaculty studentfaculty = new StudentFaculty();
+			studentfaculty.Num(); 
+			studentfaculty.Num2(); 
+		}
+	}
+
+
+
+
